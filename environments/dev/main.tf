@@ -17,7 +17,7 @@ module "vpc" {
 
   subnets = [
     {
-      ip_cidr_range = "10.0.0.0/24"
+      ip_cidr_range = "10.0.0.0/25"
       name          = "subnet-1"
       private_ip_google_access=true
       region        = "europe-west1"
