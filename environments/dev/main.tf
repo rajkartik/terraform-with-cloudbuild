@@ -9,7 +9,7 @@ module "vpc" {
   project_id = "automategcp"
   name       = "my-network-cicd-2"
   psa_config = {
-    ranges = { vpc-private-connect = "/20"
+    ranges = { vpc-private-connect-2 = "/20"
      }
     routes = null
   }
