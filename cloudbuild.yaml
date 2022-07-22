@@ -1,0 +1,25 @@
+steps: 
+- id: 'tf plan'
+  name: 'hashicorp/terraform:1.0.0'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  -  |
+        echo"branch$BRANCH_NAME"
+        if[! -z "$BRANCH_NAME" -a -d "environments/$BRANCH_NAME/"]; then
+          cd environments/$BRANCH_NAME
+          echo"run init"
+          terraform init
+          echo"run validate"
+          terraform validate
+          echo"run plan"
+          terraform plan -out terraform.plan
+          terraform apply -auto-approve terraform.plan
+        else
+        
+          env=${dir%*/}
+          env=${env#*/}
+          echo "***************************** SKIPPING APPLYING *******************************"
+          echo "Branch '$BRANCH_NAME' does not represent an oficial environment."
+        
+        fi
