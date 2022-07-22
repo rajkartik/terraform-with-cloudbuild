@@ -5,7 +5,7 @@ terraform {
   }
 }
 module "vpc" {
-  source     = "../modules/net-vpc"
+  source     = "../../modules/net-vpc"
   project_id = "automategcp"
   name       = "my-network-cicd-2"
   psa_config = {
