@@ -31,7 +31,7 @@ steps:
   - '-c'
   - | 
       
-      BRANCH_NAME = 'test'
+      
 
       echo "the branch is *********************** $BRANCH_NAME"
       echo "$BRANCH_NAME"
