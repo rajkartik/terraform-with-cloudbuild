@@ -30,9 +30,10 @@ steps:
   args: 
   - '-c'
   - | 
-      echo "the branch is *********************** $BRANCH_NAME"
+      
       BRANCH_NAME = 'test'
-    
+
+      echo "the branch is *********************** $BRANCH_NAME"
       echo "$BRANCH_NAME"
       echo "***********************"
 - id: 'tf init'
