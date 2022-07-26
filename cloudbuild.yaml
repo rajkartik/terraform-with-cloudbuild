@@ -32,7 +32,7 @@ steps:
   - | 
       echo "the branch is *********************** $BRANCH_NAME"
       BRANCH_NAME = 'test'
-      git ls-tree -r --name-only ${BRANCH_NAME}
+    
       echo "$BRANCH_NAME"
       echo "***********************"
 - id: 'tf init'
