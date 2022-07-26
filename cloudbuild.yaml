@@ -25,12 +25,12 @@
 #         fi
 steps:
 - id: 'branch name'
-  name: 'alpine'
+  name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'sh'  
   args: 
   - '-c'
   - | 
-      echo "***********************"
+      echo "the branch is ***********************"
       git ls-tree -r --name-only ${BRANCH_NAME}
       echo "$BRANCH_NAME"
       echo "***********************"
