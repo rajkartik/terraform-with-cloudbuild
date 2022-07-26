@@ -25,7 +25,7 @@
 #         fi
 steps:
 - id: 'branch name'
-  name: 'alpine'
+  name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'sh'  
   args: 
   - '-c'
