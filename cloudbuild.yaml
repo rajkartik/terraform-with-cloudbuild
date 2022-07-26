@@ -97,6 +97,11 @@ steps:
         echo "Branch '$BRANCH_NAME' does not represent an oficial environment."
         echo "*******************************************************************************"
       fi
+<<<<<<< HEAD
 # substitutions:
 #     BRANCH_NAME: test
+=======
+substitutions:
+    BRANCH_NAME: test
+>>>>>>> 5686445046867867fc71edd245667ed5c0bd618e
 # [END tf-apply]      
