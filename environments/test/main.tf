@@ -6,7 +6,7 @@ terraform {
 }
 module "vpc" {
   source     = "../../modules/net-vpc"
-  project_id = "credible-tesla-348806"
+  project_id = "empyrean-flight-357906"
   name       = "my-network-cicd-2"
 #   psa_config = {
 #     ranges = { vpc-private-connect-2 = "/20"
