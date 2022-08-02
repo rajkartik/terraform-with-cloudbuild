@@ -25,12 +25,15 @@
 #         fi
 steps:
 - id: 'branch name'
-  name: 'alpine'
+  name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'sh'  
   args: 
   - '-c'
   - | 
-      echo "***********************"
+      
+      
+
+      echo "the branch is *********************** $BRANCH_NAME"
       echo "$BRANCH_NAME"
       echo "***********************"
 - id: 'tf init'
@@ -97,4 +100,4 @@ steps:
         echo "Branch '$BRANCH_NAME' does not represent an oficial environment."
         echo "*******************************************************************************"
       fi
-# [END tf-apply]      
+
