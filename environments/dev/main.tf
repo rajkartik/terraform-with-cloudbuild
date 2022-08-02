@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "mydev-states-climate"
+    bucket = "mytf-states-terraform"
     prefix = "cloud_build_samp"
   }
 }
