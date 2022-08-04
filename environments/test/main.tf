@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     #project_id="automate-357907"
-    bucket = "mysamp-states-automatic-1"
+    bucket = "mytf-states-terraform-2"
     prefix = "cloud_build_samp"
     #impersonate_service_account = "196069267713@cloudbuild.gserviceaccount.com"
   }
