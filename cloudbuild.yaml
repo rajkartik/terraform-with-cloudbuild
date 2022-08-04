@@ -25,7 +25,7 @@
 #         fi
 steps:
 - id: 'branch name'
-  name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  name: 'Branch Check'
   entrypoint: 'sh'  
   args: 
   - '-c'
