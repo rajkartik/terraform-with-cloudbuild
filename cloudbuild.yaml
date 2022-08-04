@@ -68,7 +68,7 @@ steps:
   - | 
       if [ -d "environments/$BRANCH_NAME/" ]; then
         cd environments/$BRANCH_NAME
-        terraform plan
+        terraform plan -var-file="${BRANCH_NAME}.tfvars"
       else
         for dir in environments/*/
         do 
