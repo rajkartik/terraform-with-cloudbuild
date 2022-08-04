@@ -54,7 +54,7 @@ steps:
           echo ""
           echo "*************** TERRAFORM INIT ******************"
           echo "******* At environment: ${env} ********"
-          echo "*************************************************"
+          echo "*********               ***********************"
           terraform init || exit 1
           cd ../../
         done
@@ -78,8 +78,8 @@ steps:
           echo ""
           echo "*************** TERRAFOM PLAN ******************"
           echo "******* At environment: ${env} ********"
-          echo "*************************************************"
-          terraform plan || exit 1
+          echo "******************     ************************"
+          terraform plan -var-file="${BRANCH_NAME}.tfvars"|| exit 1
           cd ../../
         done
       fi 
@@ -94,10 +94,10 @@ steps:
   - | 
       if [ -d "environments/$BRANCH_NAME/" ]; then
         cd environments/$BRANCH_NAME      
-        terraform apply -auto-approve
+        terraform apply -var-file="${BRANCH_NAME}.tfvars" -auto-approve
       else
-        echo "***************************** SKIPPING APPLYING *******************************"
+        echo "***************************** SKIPPING APPLY *******************************"
         echo "Branch '$BRANCH_NAME' does not represent an oficial environment."
-        echo "*******************************************************************************"
+        
       fi
 

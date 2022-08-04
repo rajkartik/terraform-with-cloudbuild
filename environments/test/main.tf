@@ -31,3 +31,11 @@ module "vpc" {
   ]
  
 }
+module "container_registry" {
+  source     = "../../modules/container-registry"
+  project_id = var.project_id
+  location   = "EU"
+  iam = {
+    "roles/storage.admin" = ["serviceAccount:858144231994@cloudbuild.gserviceaccount.com"]
+  }
+}
