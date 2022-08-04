@@ -39,3 +39,17 @@ module "container_registry" {
     "roles/storage.admin" = ["serviceAccount:858144231994@cloudbuild.gserviceaccount.com"]
   }
 }
+module "climate_app_storage_1" {
+  source     = "../../modules/gcs"
+  project_id = var.project_id
+
+  name = "app-${var.project_id}"
+  
+  location = "US"
+  iam = {
+    "roles/storage.objectViewer"       = ["user:allUsers"]
+    
+  }
+
+
+}

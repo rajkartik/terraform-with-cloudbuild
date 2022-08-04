@@ -75,8 +75,6 @@ steps:
           cd ${dir}   
           env=${dir%*/}
           env=${env#*/}  
-          echo ""
-          echo "*************** TERRAFOM PLAN ******************"
           echo "******* At environment: ${env} ********"
           echo "******************     ************************"
           terraform plan -var-file="${BRANCH_NAME}.tfvars"|| exit 1
